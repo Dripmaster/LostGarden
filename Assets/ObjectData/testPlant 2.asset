@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2849ce11883755f4ebd3b6a004e0cfb0, type: 3}
+  m_Name: testPlant 2
+  m_EditorClassIdentifier: 
+  ObjectName: test flower2
+  _3DObject: {fileID: 2889333233314153521, guid: 2a5377bb7f0d5f249a822dda99baf238, type: 3}
+  viewImage: {fileID: 21300000, guid: ec46bde01fc1c6f4588a0e18303c5701, type: 3}
+  infoImage: {fileID: 21300000, guid: 7fcd5dd05a327a448bc24ba708ff2aca, type: 3}
+  infoString: "\uC774 \uAF43\uC740 \uD14C\uC2A4\uD2B8 \uAF43\uC774\uB2E4. 2222"
