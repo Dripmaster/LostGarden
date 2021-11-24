@@ -175,6 +175,7 @@ public class ObjectTransform
 	public Vector3 scale;
 	public Color color;
 	public int zone_id;
+	public Vector3 gps_pos;
 }
 
 [Serializable]

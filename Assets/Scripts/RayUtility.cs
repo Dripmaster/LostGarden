@@ -22,6 +22,19 @@ public class RayUtility
         {
             return true;
         }
+        try
+        {
+
+            GameObject.Find("3Dcanvas").GetComponent<GraphicRaycaster>().Raycast(ped, results);
+        }
+        catch
+        {
+
+        }
+        if (results.Count > 0)
+        {
+            return true;
+        }
         return false;
     }
     public static bool CameraRaycast(out RaycastHit hit)
@@ -34,11 +47,11 @@ public class RayUtility
         }
         return false;
     }
-    public static bool MouseRaycast(out RaycastHit hit)
+    public static bool MouseRaycast(out RaycastHit hit, int ignorelayer = 6)
     {//보통 레이캐스트
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-        if (Physics.Raycast(ray, out hit, 10000.0f, ~(1 << 6)))
+        if (Physics.Raycast(ray, out hit, 10000.0f, ~(1 << ignorelayer)))
         {
             return true;
         }

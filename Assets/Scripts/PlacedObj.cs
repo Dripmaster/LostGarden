@@ -27,5 +27,24 @@ public class PlacedObj : MonoBehaviour
         {
             r.material.color = c;
         }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (!RayUtility.isOnUI())
+            {
+                if(RayUtility.MouseRaycast(out RaycastHit result ))
+                {
+                    if (result.transform.gameObject.tag == "Plant")
+                    {
+                        if(result.transform.parent == transform)
+                        {
+                            controlPanel.instance.Init(this,objectTransform);
+                            GameObject.FindObjectOfType<PlayerMove>().setMove(gameObject.transform.position);
+                        }
+                    }
+                }
+            }
+        }
+
     }
 }
