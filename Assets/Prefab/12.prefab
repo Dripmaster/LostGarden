@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 2889333233314191361}
   - component: {fileID: 2889333233312864319}
   - component: {fileID: 2889333233311898367}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 8_low
-  m_TagString: Untagged
+  m_TagString: Plant
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -91,9 +91,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2889333233314191377}
   - component: {fileID: 2889333233323522033}
-  m_Layer: 0
+  - component: {fileID: 8873074933890010322}
+  m_Layer: 7
   m_Name: 12
-  m_TagString: Untagged
+  m_TagString: Plant
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -139,6 +140,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!135 &8873074933890010322
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2889333233314153521}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 38.34
+  m_Center: {x: -21.56, y: 4.42, z: 0}
 --- !u!1 &2889333233314153523
 GameObject:
   m_ObjectHideFlags: 0
@@ -150,9 +164,9 @@ GameObject:
   - component: {fileID: 2889333233314191379}
   - component: {fileID: 2889333233312864305}
   - component: {fileID: 2889333233311898353}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 1_low
-  m_TagString: Untagged
+  m_TagString: Plant
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -231,9 +245,9 @@ GameObject:
   - component: {fileID: 2889333233314191381}
   - component: {fileID: 2889333233312864307}
   - component: {fileID: 2889333233311898355}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 2_low
-  m_TagString: Untagged
+  m_TagString: Plant
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -312,9 +326,9 @@ GameObject:
   - component: {fileID: 2889333233314191383}
   - component: {fileID: 2889333233312864309}
   - component: {fileID: 2889333233311898357}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 3_low
-  m_TagString: Untagged
+  m_TagString: Plant
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -393,9 +407,9 @@ GameObject:
   - component: {fileID: 2889333233314191385}
   - component: {fileID: 2889333233312864311}
   - component: {fileID: 2889333233311898359}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 4_low
-  m_TagString: Untagged
+  m_TagString: Plant
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -474,9 +488,9 @@ GameObject:
   - component: {fileID: 2889333233314191387}
   - component: {fileID: 2889333233312864313}
   - component: {fileID: 2889333233311898361}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 5_low
-  m_TagString: Untagged
+  m_TagString: Plant
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -555,9 +569,9 @@ GameObject:
   - component: {fileID: 2889333233314191389}
   - component: {fileID: 2889333233312864315}
   - component: {fileID: 2889333233311898363}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 6_low
-  m_TagString: Untagged
+  m_TagString: Plant
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -636,9 +650,9 @@ GameObject:
   - component: {fileID: 2889333233314191391}
   - component: {fileID: 2889333233312864317}
   - component: {fileID: 2889333233311898365}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 7_low
-  m_TagString: Untagged
+  m_TagString: Plant
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

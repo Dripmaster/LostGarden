@@ -10,6 +10,8 @@ public class ScreenShotManager : MonoBehaviour
     public string screenShotURL = "http://metagardeners.com/connect/capture/upload.php";
 
 
+	public GameObject NextObj;
+	public GameObject PrevObj;
 	// Start is called before the first frame update
 	void Start()
     {
@@ -19,13 +21,23 @@ public class ScreenShotManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-			StartCoroutine(captureUpload());
-        }
     }
+	public void onClick()
+    {
+		StartCoroutine(captureUpload());
+    }
+	public void NextBtn()
+	{
+		gameObject.SetActive(false);
+		NextObj.SetActive(true);
+	}
+	public void PrevBtn()
+	{
 
-    IEnumerator captureUpload()
+		gameObject.SetActive(false);
+		PrevObj.SetActive(true);
+	}
+	IEnumerator captureUpload()
     {
 		// We should only read the screen after all rendering is complete
 		yield return new WaitForEndOfFrame();

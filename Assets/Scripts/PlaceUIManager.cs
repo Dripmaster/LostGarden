@@ -12,6 +12,8 @@ public class PlaceUIManager : MonoBehaviour
 
     public string nickName;
 
+    public Camera canvasCamera;
+
     public static PlaceUIManager instatnce;
     // Start is called before the first frame update
     PlaceUIManager()
@@ -20,9 +22,41 @@ public class PlaceUIManager : MonoBehaviour
     }
     void Start()
     {
-        
+        ResolutionFix();
     }
+    void ResolutionFix()
+    {
 
+        float targetWidthAspect = 16.0f;
+        float targetHeightAspect = 9.0f;
+
+
+        float targetWidthAspectPort = targetWidthAspect / targetHeightAspect;
+        float targetHeightAspectPort = targetHeightAspect / targetWidthAspect;
+
+        float currentWidthAspectPort = (float)Screen.width / (float)Screen.height;
+        float currentHeightAspectPort = (float)Screen.height / (float)Screen.width;
+
+        float viewPortW = targetWidthAspectPort / currentWidthAspectPort;
+        float viewPortH = targetHeightAspectPort / currentHeightAspectPort;
+
+        if (viewPortH > 1)
+            viewPortH = 1;
+        if (viewPortW > 1)
+            viewPortW = 1;
+        Camera.main.rect = new Rect(
+            (1 - viewPortW) / 2,
+            (1 - viewPortH) / 2,
+            viewPortW,
+            viewPortH);
+
+
+        canvasCamera.rect = new Rect(
+            (1 - viewPortW) / 2,
+            (1 - viewPortH) / 2,
+            viewPortW,
+            viewPortH);
+    }
     // Update is called once per frame
     void Update()
     {

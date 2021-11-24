@@ -21,6 +21,8 @@ public class TableManager : MonoBehaviour
     public GameObject inventoryParent;
     public GameObject prevObject;
 
+    public ScrollRect sr;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +45,10 @@ public class TableManager : MonoBehaviour
     {
         if (isDragging)
         {
+            //Vector3 pos = new Vector3((Screen.width*Camera.main.rect.width / 2), Screen.height * Camera.main.rect.height / 2, 0);
+            //Vector3 p = (Input.mousePosition * Camera.main.rect.width) - new Vector3(Camera.main.rect.x * Screen.width * Camera.main.rect.width, Camera.main.rect.y * Screen.height * Camera.main.rect.height, 0);
+            //pos.x *= Camera.main.rect.width;
+           // pos.y *= Camera.main.rect.height;
             draggingItem.transform.localPosition = Input.mousePosition - new Vector3(Screen.width/2,Screen.height/2,0);
             if (Input.GetMouseButtonUp(0))
             {
@@ -53,7 +59,7 @@ public class TableManager : MonoBehaviour
                     g.GetComponent<Content>().Init(DraggingInfo, "My");
                     myTable.objects.Add(DraggingInfo);
                 }
-
+                sr.vertical = true;
 
                 isDragging = false;
                 DraggingInfo = null;
@@ -64,6 +70,7 @@ public class TableManager : MonoBehaviour
         {
             if (Input.GetMouseButtonUp(0))
             {
+                sr.vertical = true;
                 dragStart = false;
                 if (isOn3DUI_2(out RaycastResult result))
                 {
@@ -99,6 +106,7 @@ public class TableManager : MonoBehaviour
                 {
                     r = result;
                     dragStart = true;
+                    sr.vertical = false;
                     Invoke("doDrag", 0.1f);
                 }
                 if(result.gameObject.tag == "AllTable")
@@ -115,7 +123,7 @@ public class TableManager : MonoBehaviour
         if (!dragStart) return;
 
         isDragging = true;
-        draggingItem = Instantiate(r.gameObject.GetComponent<Content>().info._3DObject, GameObject.Find("3Dcanvas").transform);
+        draggingItem = Instantiate(r.gameObject.GetComponent<Content>().info._3DObject, GameObject.Find("DraggedCanvas").transform);
         DraggingInfo = r.gameObject.GetComponent<Content>().info;
         draggingItem.layer = 5;
         var c = draggingItem.transform.childCount;
@@ -123,6 +131,9 @@ public class TableManager : MonoBehaviour
         {
             draggingItem.transform.GetChild(i).gameObject.layer = 5;
         }
+        sr.vertical = false; ;
+
+        draggingItem.transform.localPosition = Input.mousePosition - new Vector3(Screen.width / 2, Screen.height / 2, 0);
     }
 
 
